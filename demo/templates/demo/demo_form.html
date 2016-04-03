@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" href="{% static 'jquery-ui.min.css' %}" />
+{{ form.media.css }}
+</head>
+<body>
+
+<form method='POST'>
+    {{ form }}
+    {% csrf_token %}
+    <input type='submit'>
+</form>
+</body>
+<script type='text/javascript' src='{% static "jquery.min.js" %}'></script>
+<script type='text/javascript' src='{% static "jquery-ui.min.js" %}'></script>
+{{ form.media.js }}
+</html>
